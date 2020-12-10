@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_12_10_155822) do
   end
 
   create_table "todolists", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "account_id"
     t.date "date"
-    t.index ["user_id"], name: "index_todolists_on_user_id"
+    t.index ["account_id"], name: "index_todolists_on_account_id"
   end
 
-  add_foreign_key "todolists", "users"
+  add_foreign_key "todolists", "accounts"
 end
